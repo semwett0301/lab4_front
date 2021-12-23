@@ -1,8 +1,17 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
+import components from "@/components/UI"
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+import "@/assets/fonts/GothamPro/stylesheet.css"
+import "@/assets/global.css"
+import router from "@/router/router";
+
+const app = createApp(App)
+components.forEach(component => {
+    app.component(component.name, component)
+})
+
+app
+    .use(router)
+    .mount('#app')
