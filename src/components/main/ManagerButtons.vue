@@ -1,6 +1,6 @@
 <template>
   <div class="man-buttons">
-    <my-button @click="close">Вернуться</my-button>
+    <my-button @click="close">Выйти</my-button>
     <my-button @click="remove">Очистить</my-button>
   </div>
 </template>
